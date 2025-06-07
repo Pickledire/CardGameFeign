@@ -1,0 +1,115 @@
+/* Main CSS - Imports all component styles */
+@import './base.css';
+@import './gameboard.css';
+@import './cards.css';
+@import './setup.css';
+
+/* App-specific overrides and additional styles */
+#root {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Global scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Custom focus styles */
+*:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+button:focus,
+input:focus,
+select:focus {
+  outline: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .setup-container {
+    padding: 1rem;
+  }
+  
+  .setup-card {
+    padding: 1.5rem;
+  }
+  
+  .game-container {
+    padding: 0.5rem;
+  }
+  
+  .hand-cards {
+    gap: 0.25rem;
+  }
+  
+  .hand-card {
+    min-width: 6rem;
+    max-width: 7rem;
+    height: 8rem;
+  }
+  
+  .creatures-area {
+    gap: 0.25rem;
+  }
+  
+  .creature-card {
+    min-width: 4rem;
+    max-width: 5rem;
+    height: 5.5rem;
+  }
+} 

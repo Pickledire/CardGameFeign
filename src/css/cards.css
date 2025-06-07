@@ -1,0 +1,339 @@
+/* Card Styles */
+
+/* Base Card Styles */
+.card-base {
+  position: relative;
+  border: 2px solid;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: all 200ms;
+}
+
+/* Creature Cards */
+.creature-card {
+  background: linear-gradient(135deg, var(--color-from), var(--color-to));
+  color: white;
+  border-color: var(--color-border);
+  padding: 0.5rem;
+  min-width: 5rem;
+  max-width: 6.25rem;
+  height: 6.75rem;
+  flex-shrink: 0;
+}
+
+.creature-card.clickable {
+  cursor: pointer;
+}
+
+.creature-card.clickable:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.creature-card.tapped {
+  transform: rotate(90deg);
+  opacity: 0.75;
+}
+
+.creature-card.opponent {
+  transform: rotate(180deg);
+}
+
+.creature-mana-cost {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #eab308;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: black;
+}
+
+.creature-name {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.creature-type {
+  font-size: 0.75rem;
+  opacity: 0.75;
+  margin-bottom: 0.5rem;
+}
+
+.creature-stats {
+  position: absolute;
+  bottom: 0.25rem;
+  right: 0.25rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+}
+
+.creature-stats-text {
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.creature-tapped-indicator {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  font-size: 0.75rem;
+  background: rgba(239, 68, 68, 0.8);
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+}
+
+.creature-color-gem {
+  position: absolute;
+  bottom: 0.25rem;
+  left: 0.25rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Hand Cards */
+.hand-card {
+  background: linear-gradient(135deg, var(--color-from), var(--color-to));
+  color: white;
+  border-color: var(--color-border);
+  padding: 0.75rem;
+  min-width: 7.5rem;
+  max-width: 8.75rem;
+  height: 10rem;
+  flex-shrink: 0;
+}
+
+.hand-card.clickable {
+  cursor: pointer;
+}
+
+.hand-card.clickable:hover {
+  transform: scale(1.05) translateY(-0.5rem);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.hand-card.unplayable {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: grayscale(100%);
+}
+
+.hand-card.selected {
+  border: 4px solid #eab308;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: scale(1.05) translateY(-0.5rem);
+}
+
+.hand-card-mana-cost {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: #eab308;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: black;
+}
+
+.hand-card-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.hand-card-name {
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.hand-card-type {
+  font-size: 0.75rem;
+  opacity: 0.75;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.hand-card-stats {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+
+.hand-card-stats-text {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.hand-card-duration {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+
+.hand-card-duration-text {
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.hand-card-color-gem {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.hand-card-selected-indicator {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  background: #eab308;
+  color: black;
+  font-size: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  font-weight: 700;
+}
+
+/* Feign Cards */
+.feign-card {
+  background: linear-gradient(135deg, #374151, #4b5563);
+  color: white;
+  border: 1px solid #6b7280;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.feign-card.revealed {
+  background: linear-gradient(135deg, var(--color-from), var(--color-to));
+  border-color: var(--color-border);
+}
+
+.feign-card-back {
+  background: linear-gradient(135deg, #1f2937, #374151);
+  border: 1px solid #4b5563;
+}
+
+.feign-card-name {
+  font-weight: 600;
+}
+
+/* Color Theme Variables */
+.color-verdant {
+  --color-from: #059669;
+  --color-to: #047857;
+  --color-border: #10b981;
+}
+
+.color-cinder {
+  --color-from: #dc2626;
+  --color-to: #b91c1c;
+  --color-border: #ef4444;
+}
+
+.color-azure {
+  --color-from: #2563eb;
+  --color-to: #1d4ed8;
+  --color-border: #3b82f6;
+}
+
+.color-ivory {
+  --color-from: #eab308;
+  --color-to: #d97706;
+  --color-border: #f59e0b;
+}
+
+.color-umbral {
+  --color-from: #374151;
+  --color-to: #111827;
+  --color-border: #6b7280;
+}
+
+.color-violet {
+  --color-from: #7c3aed;
+  --color-to: #5b21b6;
+  --color-border: #8b5cf6;
+}
+
+/* Special Effects */
+@keyframes cardHover {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  100% {
+    transform: scale(1.05) translateY(-0.5rem);
+  }
+}
+
+@keyframes cardSelect {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+  100% {
+    transform: scale(1.05) translateY(-0.5rem);
+    box-shadow: 0 0 0 4px #eab308;
+  }
+}
+
+.card-hover-effect {
+  animation: cardHover 200ms ease-out forwards;
+}
+
+.card-select-effect {
+  animation: cardSelect 200ms ease-out forwards;
+}
+
+/* Loading States */
+.card-loading {
+  background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+} 
